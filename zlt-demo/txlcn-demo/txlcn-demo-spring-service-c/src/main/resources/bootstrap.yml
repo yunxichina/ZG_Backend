@@ -1,0 +1,14 @@
+server:
+  port: 12003
+
+zlt:
+  nacos:
+    server-addr: 127.0.0.1:8848
+
+spring:
+  application:
+    name: txlcn-demo-spring-service-c
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${zlt.nacos.server-addr}
